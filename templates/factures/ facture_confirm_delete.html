@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Supprimer un produit{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="card shadow mx-auto" style="max-width: 400px;">
+    <div class="card-body text-center">
+
+      <!-- Icône d'avertissement -->
+      <div class="mb-4 text-danger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+          <path d="M7.938 2.016a.13.13 0 0 1 .125 0l6.857 3.96c.09.052.09.16 0 .212l-6.857 3.96a.13.13 0 0 1-.125 0L1.08 6.188a.127.127 0 0 1 0-.212l6.858-3.96zM8 4.002a.905.905 0 1 0 0 1.81.905.905 0 0 0 0-1.81zM7.002 6h2v5h-2V6zm0 6h2v2h-2v-2z"/>
+        </svg>
+      </div>
+
+      <h4 class="card-title mb-4">Supprimer ce produit ?</h4>
+
+      <!-- Détails du produit -->
+      <ul class="list-group list-group-flush mb-4 text-start">
+        <li class="list-group-item d-flex align-items-center">
+          <i class="bi bi-tag-fill text-secondary me-2 fs-5"></i> {{ produit.nom }}
+        </li>
+        <li class="list-group-item d-flex align-items-center">
+          <i class="bi bi-currency-euro text-secondary me-2 fs-5"></i> {{ produit.prix }} €
+        </li>
+        <li class="list-group-item d-flex align-items-center">
+          <i class="bi bi-calendar3 text-secondary me-2 fs-5"></i> {{ produit.date_peremption }}
+        </li>
+      </ul>
+
+      <!-- Boutons -->
+      <div class="d-flex justify-content-center gap-3">
+        <a href="{% url 'produits:liste' %}" class="btn btn-outline-secondary">
+          Annuler
+        </a>
+        <form method="post" class="d-inline">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">
+            Supprimer
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

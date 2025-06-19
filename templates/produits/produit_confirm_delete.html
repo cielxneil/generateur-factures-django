@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Supprimer le produit{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-body">
+      <h4 class="card-title text-center text-danger">Confirmer la suppression</h4>
+      <p class="text-center text-muted">Voulez‑vous vraiment supprimer le produit suivant&nbsp;?</p>
+
+      <!-- Détails du produit à supprimer -->
+      <ul class="list-group list-group-flush mt-3">
+        <li class="list-group-item"><strong>ID :</strong> {{ produit.id }}</li>
+        <li class="list-group-item"><strong>Nom :</strong> {{ produit.nom }}</li>
+        <li class="list-group-item"><strong>Prix :</strong> {{ produit.prix }} €</li>
+        <li class="list-group-item"><strong>Date de péremption :</strong> {{ produit.date_peremption }}</li>
+      </ul>
+
+      <!-- Boutons d'action -->
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'produits:liste' %}" class="btn btn-secondary">Annuler</a>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
