@@ -13,6 +13,7 @@ Ce projet est une application web de gestion de produits et génération de fact
 ## Installation
 1. Cloner le dépôt :    
     git clone <https://github.com/cielxneil/generateur-factures-django>
+    
     cd gestion_factures
 
 2. Créez et activez un environnement virtuel Python :
