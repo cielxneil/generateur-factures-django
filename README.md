@@ -19,16 +19,17 @@ Ce projet est une application web de gestion de produits et génération de fact
 
 2. Créez et activez un environnement virtuel Python :
     python3 -m venv venv
+   
     source venv/bin/activate  # Linux/macOS
     venv\Scripts\activate     # Windows
 
-3. Installez les dépendances :
+4. Installez les dépendances :
     pip install -r requirements.txt
 
-4. Appliquez les migrations :
+5. Appliquez les migrations :
     python manage.py migrate
 
-5. Démarrez le serveur :
+6. Démarrez le serveur :
     python manage.py runserver
 
 ## ⚙️ Utilisation
