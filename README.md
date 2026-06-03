@@ -8,6 +8,7 @@ Ce projet est une application web de gestion de produits et génération de fact
 - Affichage détaillé des factures (nombre de produits, total à payer)
 - Pagination pour les listes de produits et de factures
 - Interface claire et responsive grâce à Bootstrap 5.
+  
 --
 
 ## Installation
