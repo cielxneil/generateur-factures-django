@@ -17,11 +17,11 @@ Ce projet est une application web de gestion de produits et génération de fact
     
     cd gestion_factures
 
-2. Créez et activez un environnement virtuel Python :
-    python3 -m venv venv
-   
-    source venv/bin/activate  # Linux/macOS
-    venv\Scripts\activate     # Windows
+2. Créez et activez un environnement virtuel Python :  
+python3 -m venv venv
+
+source venv/bin/activate # Linux/macOS
+venv\Scripts\activate # Windows
 
 4. Installez les dépendances :
     pip install -r requirements.txt
